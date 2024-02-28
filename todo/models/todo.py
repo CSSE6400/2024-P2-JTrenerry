@@ -29,5 +29,16 @@ class Todo(db.Model):
             'updated_at': self.updated_at.isoformat() if self.updated_at else None,
         }
 
+    def valid_columns():
+        return [
+            'id',
+            'title',
+            'description',
+            'completed',
+            'deadline_at',
+            'created_at',
+            'updated_at',
+        ]
+
     def __repr__(self):
         return f'<Todo {self.i} {self.title}>'
